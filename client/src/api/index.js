@@ -33,18 +33,3 @@ export const fetchPlaylist = (token, userId) => axios.get(`https://api.spotify.c
 })
 
 
-// const searchArtists = async (e) => {
-    //     e.preventDefault();
-    //     const {data} = await axios.get("https://api.spotify.com/v1/search",{
-    //         headers:{
-    //             Authorization: `Bearer ${token}`
-    //         },
-
-    //         params:{
-    //             q:searchKey,
-    //             type:"artist"
-    //         }
-    //     })
-
-    //     setArtists(data.artists.items);
-    // }

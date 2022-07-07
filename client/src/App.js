@@ -10,7 +10,7 @@ import Artists from './components/Artists';
 import { getPlaylist } from './actions/playlist';
 import WebPlayback from './components/WebPlayback'
 
-import Home from './screens/home'
+import Home from './screens/home/index'
 const App = () => {
 
     const dispatch = useDispatch();
@@ -112,18 +112,15 @@ const App = () => {
 
     return(
         <div>
-            <h1>Spotify Listen</h1>
-            <div>
-                <Home></Home>
-            </div>
+            <Home></Home>
 
 
 
-            {!token ? 
+            {/* {!token ? 
             <a href={`${AUTH_ENDPOINT}?client_id=${CLIENT_ID}&redirect_uri=${REDIRECT_URL}&response_type=${RESPONSE_TYPE}`}>Login to Spotify</a>
             :<button onClick={logout}>Logout</button>
 
-            }
+            } */}
 
             {/* {token?
                 <form onSubmit={getArtist}>
