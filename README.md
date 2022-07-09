@@ -1,2 +1,2 @@
 # Listen
-Find people to listen to music together
+Join other's spotify listening parties
