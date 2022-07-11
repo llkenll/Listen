@@ -20,6 +20,17 @@ export const searchArtists = (token, searchKey) => async (dispatch) =>{
 }
 
 
+export const addSong = (token, device_id, uri) => async(dispatch)=>{
+    try {
+        const {data} = await api.addSong(token, device_id, uri);
+        dispatch({type:"ADD", payload:data});
+    } catch (error) {
+        console.log(error);
+        
+    }
+}
+
+
 
 
 

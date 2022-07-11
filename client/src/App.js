@@ -31,24 +31,24 @@ const App = () => {
     const [userId, setUserId] =  useState("");
 
 
-    useEffect(() => {
-        const hash = window.location.hash
-        let token = window.localStorage.getItem("token")
+    // useEffect(() => {
+    //     const hash = window.location.hash
+    //     let token = window.localStorage.getItem("token")
 
-        // getToken()
+    //     // getToken()
 
 
-        if (!token && hash) {
-            let urlParams = new URLSearchParams(window.location.hash.replace("#","?"))
-            token = urlParams.get('access_token')
+    //     if (!token && hash) {
+    //         let urlParams = new URLSearchParams(window.location.hash.replace("#","?"))
+    //         token = urlParams.get('access_token')
             
-            window.location.hash = ""
-            window.localStorage.setItem("token", token)
-        }
+    //         window.location.hash = ""
+    //         window.localStorage.setItem("token", token)
+    //     }
 
-        setToken(token)
+    //     setToken(token)
 
-    }, [])
+    // }, [])
 
 
 
@@ -69,7 +69,7 @@ const App = () => {
     const getArtist = (e) => {
         e.preventDefault();
 
-        dispatch(searchArtists(token, searchKey)) 
+        //dispatch(searchArtists(token, searchKey)) 
 
        
     }
@@ -114,7 +114,7 @@ const App = () => {
         <div>
             <Home></Home>
 
-
+            <button onClick={logout}>Logout</button>
 
             {/* {!token ? 
             <a href={`${AUTH_ENDPOINT}?client_id=${CLIENT_ID}&redirect_uri=${REDIRECT_URL}&response_type=${RESPONSE_TYPE}`}>Login to Spotify</a>

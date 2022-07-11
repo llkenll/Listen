@@ -33,3 +33,8 @@ export const fetchPlaylist = (token, userId) => axios.get(`https://api.spotify.c
 })
 
 
+export const addSong = (token, device_id, uri) => axios.post(`https://api.spotify.com/v1/me/player/queue?uri=${uri}&device_id=${device_id}`,{
+    headers:{
+        Authorization: `Bearer ${token}`
+    }
+})
