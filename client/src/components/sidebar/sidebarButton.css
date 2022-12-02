@@ -2,6 +2,21 @@ a {
     text-decoration: none !important;
 }
 
+.logout{
+    height: 80px;
+    width: 80px;
+    border:none;
+    color: #F8D8C0;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    margin: 20px auto;
+    transition: all 0.2s ease;
+    background-color: rgba(244, 187, 146,0.0);
+}
+
 .btn-body{
     height: 80px;
     width: 80px;

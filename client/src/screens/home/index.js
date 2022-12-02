@@ -34,7 +34,10 @@ export default function Home() {
 
     }, [])
 
-
+    const logout = () =>{
+        setToken("");
+        window.localStorage.removeItem("token");
+    }
 
    
 
@@ -45,17 +48,15 @@ export default function Home() {
             <Router>
                 <div className = "main-body">
                 
-                <Sidebar/>
+                <Sidebar logout = {logout}/>
             <Routes>
-                <Route path = "/" element={<Library/>}/>
-                <Route path="/feed" element ={<Feed/>}/>
-                <Route path="/party" element ={<Party/>}/>
                 <Route path="/player" element ={<Player acessTok={token}/>}/>
+                <Route path = "/" element={<Library/>}/>
+                {/* <Route path="/feed" element ={<Feed/>}/>*/}
+                {/*<Route path="/party" element ={<Party/>}/>*/}
+               
             </Routes>
             </div>
         </Router>
-       
-        
-        
     )
 }

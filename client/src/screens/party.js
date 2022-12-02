@@ -2,6 +2,6 @@ import React from 'react';
 
 export default function Party(){
     return <div>
-        party
+        party (In development!)
     </div>
 }

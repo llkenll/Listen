@@ -14,7 +14,7 @@ export default function Queue({ tracks, setCurrentIndex }) {
               onClick={() => setCurrentIndex(index)}
             >
               <p className="track-name">{track?.track?.name}</p>
-              <p>0:30</p>
+              
             </div>
           ))}
         </div>

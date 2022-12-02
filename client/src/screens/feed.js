@@ -2,6 +2,6 @@ import React from 'react';
 
 export default function Feed(){
     return <div>
-        feed
+        feed (In development!)
     </div>
 }

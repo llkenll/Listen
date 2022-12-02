@@ -2,7 +2,7 @@ import axios from "axios";
 
 const AUTH_ENDPOINT = "https://accounts.spotify.com/authorize?"
 const clientId = '74d6138fa6b94b328a577432074d3f7c';
-const redirectUri = "http://localhost:3000";
+const redirectUri = "https://spotifywebplayer123.herokuapp.com/";
 const scopes = ["user-library-read", "playlist-read-private", "streaming","user-read-playback-state","user-modify-playback-state"];
 const RESPONSE_TYPE = "token"
 

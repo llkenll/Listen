@@ -1,2 +1,2 @@
-Spotify Web Player
-https://spotifywebplayer123.herokuapp.com/
+# Listen
+Join other's spotify listening parties

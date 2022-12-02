@@ -22,7 +22,6 @@ export default function Player({acessTok}) {
   const [currentImage, setCurrentImage] = useState("");
   const [currentSong, setCurrentSong] = useState({});
 
-  const [length, setLength] = useState(-1);
 
   const [goNext, setNextTrack] = useState(false);
 
@@ -114,18 +113,6 @@ export default function Player({acessTok}) {
       <div className="left-player-body">
         <AudioPlayer2 currentSong={currentSong}/>
           
-        {/* <AudioPLayer
-            currentTrack={currentTrack}
-            total={tracks}
-            currentIndex={currentIndex}
-            setCurrentIndex={setCurrentIndex}
-            accessToken={acessTok}
-            songUri={tracks[currentIndex]?.track?.uri}
-            setNextTrack={setNextTrack}
-            len={tracks.length}
-  
-        ></AudioPLayer> */}
-        {/* <Player accessToken={acessTok} trackUri={tracks[currentIndex]?.track?.uri} len ={len} currentIndex={currentIndex} setCurrentIndex={setCurrentIndex} setNext={setNextTrack}></Player> */}
         <div className="player">
           <Player2 accessToken={acessTok} trackUri={tracks[currentIndex]?.track?.uri} len ={len} currentIndex={currentIndex} setCurrentIndex={setCurrentIndex} setNext={setNextTrack} 
           setDeviceId={setDeviceId}
@@ -138,7 +125,6 @@ export default function Player({acessTok}) {
         
         
         {/* <Widgets artistID={currentTrack?.album?.artists[0]?.id} /> */}
-        <button onClick={add}>add all songs</button>
       </div>
       <div className="right-player-body">
         <SongCard album={currentTrack?.album} currentSong ={currentSong}/>

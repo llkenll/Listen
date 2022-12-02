@@ -31,7 +31,7 @@ export default function AlbumInfo({ album, currentSong, length }) {
         </div>
       </div>
       <div className="album-info">
-        <p>{`${currentSong.name} is an ${album?.album_type} by ${artists?.join(
+        <p>{`${currentSong.name} is a song by ${artists?.join(
           ", "
         )} 
         `}</p>

@@ -9,8 +9,9 @@ import { MdSpaceDashboard } from "react-icons/md";
 
 import { BsFillMusicPlayerFill } from "react-icons/bs";
 import apiClient from '../../spotify';
+import SignOutButton from './SignOutButton';
 
-export default function Sidebar(){
+export default function Sidebar(props){
     const [image, setImage] = useState("https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRdLAY3C19kL0nV2bI_plU3_YFCtra0dpsYkg&usqp=CAU");
     useEffect(()=>{
         apiClient.get("me").then(response=> {
@@ -24,12 +25,13 @@ export default function Sidebar(){
             className='profile-img' 
             alt="profile"/>
             <div>
-                <SidebarButton title="Feed" to="/feed" icon={<MdSpaceDashboard/>}/>
-                <SidebarButton title="Listen Parties" to="/party" icon={<BsFillMusicPlayerFill/>}/>
-                <SidebarButton title="Player" to="/player" icon={<FaPlay />} />
+                {/*<SidebarButton title="Feed" to="/feed" icon={<MdSpaceDashboard/>}/>*/}
+                {/*<SidebarButton title="Listen Parties" to="/party" icon={<BsFillMusicPlayerFill/>}/>*/}
                 <SidebarButton title="Library" to="/" icon={<IoLibrary />} />
+                <SidebarButton title="Player" to="/player" icon={<FaPlay />} />
+                
             </div>
-        <SidebarButton title="Sign Out" to="" icon={<FaSignOutAlt />} />
+        <SignOutButton logout={props.logout}/>
     </div>
 
     )
